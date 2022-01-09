@@ -7,13 +7,16 @@
         
         <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
         <script src="./js/components/mainContainer.js"></script>
-        <script src="./js/components/heroImage.js"></script>
-        <script src="./js/views/landing.js" defer></script>
+        <script src="./js/components/resultList.js"></script>
+        <script src="./js/components/contact.js"></script>
+        <script src="./js/views/results.js" defer></script>
+        <script src="./js/scripts.js" defer></script>
     </head>
     <body>
         <main id="app">
             <main-container>
-                <hero-image v-bind:hero-image="landingPageHero" v-bind:calculator="calculator"></hero-image>
+                <result-list v-bind:results="results"></result-list>
+                <contact></contact>
             </main-container>
         </main>
     </body>

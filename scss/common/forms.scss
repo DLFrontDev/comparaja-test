@@ -1,0 +1,29 @@
+label {
+    display: block;
+    margin-bottom: 10px;
+
+    span {
+        display: block;
+        margin-bottom: 5px;
+        padding-left: 12px;
+
+        @media screen and (min-width: $min-break-m) {
+            font-size: 18px;    
+        }
+    }
+
+    input {
+        width: 100%;
+        background: $white;
+        color: $text-grey;
+        border: 1px $text-grey solid;
+        border-radius: 3px;
+        padding: 8px 12px;
+        line-height: 10px;
+        font-size: 14px;
+
+        @media screen and (min-width: $min-break-m) {
+            font-size: 16px;            
+        }
+    }
+}

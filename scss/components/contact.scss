@@ -1,0 +1,76 @@
+.contact-container {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 0 $content-padding-xs;
+
+    @media screen and (min-width: $min-break-s) {
+        padding: 0;
+        align-items: flex-end;
+    }
+
+    @each $break, $break-width in $min-breakpoints {
+        @media screen and (min-width: $break-width) {
+            right: map.get($content-paddings, $break);
+        }
+    }
+
+    .btn-contact {
+        background: $main-green;
+        color: $white;
+        border: none;
+        border-bottom: none;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        padding: 10px 20px 10px;
+        font-weight: 700;
+        font-size: 16px;
+        margin: 0 30px;
+
+        &:focus, &.hover {
+            background-color: $dark-green;
+            outline: none;
+
+            & + .contact-form-container {
+                border-color: $dark-green;
+            }
+        }
+
+        @media screen and (min-width: $min-break-s) {
+            margin: 0;
+        }
+    }
+    
+    .contact-form-container {
+        background-color: $white;
+        padding: 15px 20px;
+        border: 2px $main-green solid;
+        border-bottom: none;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+
+        @media screen and (min-width: $min-break-s) {
+            width: 300px;
+            border-top-right-radius: 0;
+        }
+
+        form {
+            margin: 0;
+        }
+
+        &.slide-enter-active, &.slide-leave-active {
+            transition: transform .5s;
+            transform: translateY(0);
+        }
+        
+        &.slide-enter, &.slide-leave-to {
+            transform: translateY(100%);
+        }
+    }
+
+}
+

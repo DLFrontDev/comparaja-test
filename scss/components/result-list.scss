@@ -1,0 +1,100 @@
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.result-list {
+    padding-top: 50px;
+    
+    .result-card-container {
+        background-color: $white;
+        @include full-width;
+
+        .result-card-wrapper {
+            padding: 40px 0 70px;
+            @include content-width;
+
+            > ul {
+                @include reset-list;
+                display: grid;
+                grid-template-columns: 1fr;
+                row-gap: 20px;
+                column-gap: 20px;
+
+                @media screen and (min-width: $min-break-m) {
+                    grid-template-columns: 1fr 1fr;
+                }
+
+                @media screen and (min-width: $min-break-l) {
+                    grid-template-columns: 1fr 1fr 1fr;
+                }
+
+                > li {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    background-color: $dark-white;
+                    border: 1px $blue-grey solid;
+                    box-shadow: $light-grey 0 5px 10px 0;
+                    padding: 15px 15px 30px;
+                    border-radius: 7px;
+
+                    h4 {
+                        margin: 0;
+                        color: $main-blue;
+                    }
+
+                    hr {
+                        margin: 10px 0 20px;
+                        border: 1px solid $main-blue;
+                    }
+
+                    p {
+                        margin: 0 0 5px;
+                        display: flex;
+                        justify-content: space-between;
+
+                        span:first-child {
+                            font-weight: 700;
+                        }
+                    }
+
+                    .card-tax + .card-total {
+                        margin-top: 15px;
+                    }
+
+                    .card-month {
+                        color: $main-green;
+                        font-weight: 700;
+                    }
+
+                    *:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+
+            .loading-container {
+                padding: 40px 0 10px;
+                text-align: center;
+    
+                &:before {
+                    content: '';
+                    display: inline-block;
+                    height: 40px;
+                    width: 40px;
+                    border-radius: 50%;
+                    border: 6px $dark-green solid;
+                    border-top-color: $light-green;
+                    border-right-color: $light-green;
+                    animation: spin linear 1s infinite;
+                }
+            }
+        }
+
+    }
+}

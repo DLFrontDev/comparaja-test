@@ -1,0 +1,15 @@
+$content-width-xs: 290px;
+$content-width-s: 420px;
+$content-width-m: 648px;
+$content-width-l: 864px;
+$content-width-xl: 1206px;
+
+$content-widths: ('s': $content-width-s, 'm': $content-width-m, 'l': $content-width-l, 'xl': $content-width-xl);
+
+$content-padding-xs: 15px;
+$content-padding-s: 30px;
+$content-padding-m: 60px;
+$content-padding-l: 80px;
+$content-padding-xl: 80px;
+
+$content-paddings: ('s': $content-padding-s, 'm': $content-padding-m, 'l': $content-padding-l, 'xl': $content-padding-xl);

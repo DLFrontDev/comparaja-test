@@ -1,0 +1,30 @@
+button.btn {
+    padding: 10px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    color: $white;
+    cursor: pointer;
+
+    &:focus, &:hover {
+        outline: none;
+    }
+
+    &-primary {
+        &-blue {
+            background: $main-blue;
+
+            &:focus, &:hover {
+                background: $dark-blue;
+            }
+        }
+        &-green {
+            background: $main-green;
+
+            &:focus, &:hover {
+                background: $dark-green;
+            }
+        }
+    }
+}

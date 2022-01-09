@@ -1,0 +1,32 @@
+@mixin content-width {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: $content-width-xs;
+    padding-left: $content-padding-xs;
+    padding-right: $content-padding-xs;
+
+    @each $break, $break-width in $min-breakpoints {
+        @media screen and (min-width: $break-width) {
+            max-width: map.get($content-widths, $break);
+            padding-left: map.get($content-paddings, $break);
+            padding-right: map.get($content-paddings, $break);
+        }
+    }
+}
+
+@mixin full-width {
+    width: 100vw;
+    margin-left: calc(-50vw + #{$content-width-xs} / 2);
+
+    @each $break, $break-width in $min-breakpoints {
+        @media screen and (min-width: $break-width) {
+            margin-left: calc(-50vw + #{map.get($content-widths, $break)} / 2);
+        }
+    }
+}
+
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
