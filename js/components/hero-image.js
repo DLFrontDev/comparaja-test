@@ -4,7 +4,7 @@ let calculator = {
         <div class='calculator'>
             <h3 class='calculator-title'>{{calculator.title}}</h3>
             <p class='calculator-description'>{{calculator.description}}</p>
-            <form action="results.html" method="post">
+            <form action="results.html" method="get">
                 <div class='calculator-range'>
                     <div class='range-label'>
                         <span>Montante</span>
