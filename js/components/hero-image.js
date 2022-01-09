@@ -10,14 +10,14 @@ let calculator = {
                         <span>Montante</span>
                         <span class='range-value'>{{calculator.targetAmount}} €</span>
                     </div>
-                    <input type='range' v-model="calculator.targetAmount" value='{{calculator.targetAmount}}' v-bind:min='calculator.minAmount' v-bind:max='calculator.maxAmount' step='500'>
+                    <input type='range' v-model="calculator.targetAmount" v-bind:value='calculator.targetAmount' v-bind:min='calculator.minAmount' v-bind:max='calculator.maxAmount' step='500'>
                 </div>
                 <div class='calculator-range'>
                     <div class='range-label'>
                         <span>Prazo</span>
                         <span class='range-value'>{{calculator.targetDuration}} meses</span>
                     </div>
-                    <input type='range' v-model="calculator.targetDuration" value='{{calculator.targetDuration}}' v-bind:min='calculator.minDuration' v-bind:max='calculator.maxDuration' step='6'>
+                    <input type='range' v-model="calculator.targetDuration" v-bind:value='calculator.targetDuration' v-bind:min='calculator.minDuration' v-bind:max='calculator.maxDuration' step='6'>
                 </div>
                 <div class='calculator-result'>
                     <span>Prestação mensal</span>

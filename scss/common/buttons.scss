@@ -4,8 +4,9 @@ button.btn {
     border-radius: 8px;
     font-size: 16px;
     font-weight: 700;
-    color: $white;
+    box-sizing: border-box;
     cursor: pointer;
+    transition: all .3s;
 
     &:focus, &:hover {
         outline: none;
@@ -14,6 +15,7 @@ button.btn {
     &-primary {
         &-blue {
             background: $main-blue;
+            color: $white;
 
             &:focus, &:hover {
                 background: $dark-blue;
@@ -21,9 +23,23 @@ button.btn {
         }
         &-green {
             background: $main-green;
+            color: $white;
 
             &:focus, &:hover {
                 background: $dark-green;
+            }
+        }
+    }
+
+    &-secondary {
+        &-green {
+            background: transparent;
+            border: 2px $main-green solid;
+            color: $main-green;
+
+            &:focus, &:hover {
+                border-color: $dark-green;
+                color: $dark-green;
             }
         }
     }

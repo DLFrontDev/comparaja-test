@@ -30,15 +30,7 @@
         font-weight: 700;
         font-size: 16px;
         margin: 0 30px;
-
-        &:focus, &.hover {
-            background-color: $dark-green;
-            outline: none;
-
-            & + .contact-form-container {
-                border-color: $dark-green;
-            }
-        }
+        cursor: pointer;
 
         @media screen and (min-width: $min-break-s) {
             margin: 0;

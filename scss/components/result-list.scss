@@ -8,11 +8,13 @@
 }
 
 .result-list {
-    padding-top: 50px;
+    .result-list-title-container {
+        padding-top: 50px;
+        @include content-width;
+    }
     
     .result-card-container {
         background-color: $white;
-        @include full-width;
 
         .result-card-wrapper {
             padding: 40px 0 70px;

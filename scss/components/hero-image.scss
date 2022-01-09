@@ -3,6 +3,7 @@
 
     .text-container {
         position: relative;
+        @include content-width;
         
         @media screen and (min-width: $min-break-m) {
             display: flex;
@@ -52,7 +53,9 @@
 
     .image-container {
         position: absolute;
-        @include full-width;
+        width: 100%;
+        left: 0;
+        top: 0;
 
         picture {
             img {

@@ -6,15 +6,15 @@
         <link rel="stylesheet" href="./css/styles.css">
         
         <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
-        <script src="./js/components/mainContainer.js"></script>
-        <script src="./js/components/resultList.js"></script>
+        <script src="./js/components/main-container.js"></script>
+        <script src="./js/components/result-list.js"></script>
         <script src="./js/components/contact.js"></script>
         <script src="./js/views/results.js" defer></script>
         <script src="./js/scripts.js" defer></script>
     </head>
     <body>
         <main id="app">
-            <main-container>
+            <main-container v-bind:footer="footer">
                 <result-list v-bind:results="results"></result-list>
                 <contact></contact>
             </main-container>

@@ -1,3 +1,19 @@
+@mixin calc-range-track {
+    background: $light-grey;
+    height: 10px;
+    border-radius: 5px;
+}
+
+@mixin calc-range-thumb {    
+    -webkit-appearance: none;
+    background: $main-blue;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    margin-top: -3px;
+    border: none;
+}
+
 .calculator {
     max-width: 300px;
     padding: 30px 25px;
@@ -42,9 +58,18 @@
                 margin-top: -3px;
             }
 
-            &::-webkit-slider-progress-value {
-                -webkit-appearance: none;
-                background: $main-blue;
+            &::-webkit-slider-runnable-track {
+                @include calc-range-track;
+            }
+            &::-moz-range-track {
+                @include calc-range-track;
+            }
+
+            &::-webkit-slider-thumb {
+                @include calc-range-thumb;
+            }
+            &::-moz-range-thumb {
+                @include calc-range-thumb;
             }
         }
     }

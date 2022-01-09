@@ -1,9 +1,63 @@
 let resultsPage = new Vue({
     el: '#app',
-    data() {
-        return {
-            results: []
-        }                           
+    data: {
+        results: [],
+        footer: {
+            lists: [
+                [
+                    {
+                        type: 'title',
+                        text: 'Footer list title 1'
+                    },
+                    {
+                        type: 'link',
+                        text: 'Footer link 1'
+                    },
+                    {
+                        type: 'link',
+                        text: 'Footer link 2'
+                    },
+                    {
+                        type: 'link',
+                        text: 'Footer link 3'
+                    },
+                    {
+                        type: 'link',
+                        text: 'Footer link 4'
+                    },
+                    {
+                        type: 'title',
+                        text: 'Footer list title 2'
+                    },
+                    {
+                        type: 'link',
+                        text: 'Footer link 1'
+                    },
+                    {
+                        type: 'link',
+                        text: 'Footer link 2'
+                    }
+                ],
+                [
+                    {
+                        type: 'title',
+                        text: 'Footer list title 1'
+                    },
+                    {
+                        type: 'link',
+                        text: 'Footer link 1'
+                    },
+                    {
+                        type: 'link',
+                        text: 'Footer link 2'
+                    },
+                    {
+                        type: 'link',
+                        text: 'Footer link 3'
+                    }
+                ]
+            ]
+        }
     },
     methods: {
         getResults: function() {

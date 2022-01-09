@@ -2,7 +2,9 @@ let resultList = {
     props: ['results'],
     template: `
         <div class='result-list'>
-            <h2>Resultados</h2>
+            <div class='result-list-title-container'>
+                <h2>Resultados</h2>
+            </div>
             <div class='result-card-container'>
                 <div class='result-card-wrapper'>
                     <ul v-if="results.products">

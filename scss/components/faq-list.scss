@@ -1,0 +1,196 @@
+.faq-list {
+    @include content-width;
+    margin-top: 50px;
+
+    .faq-list-subtitle {
+        color: $main-green;
+    }
+
+    .faq-list-container {
+        > ul {
+            @include reset-list;
+            display: grid;
+            grid-template-columns: 1fr;
+            row-gap: 20px;
+            column-gap: 20px;
+
+            @media screen and (min-width: $min-break-m) {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            @media screen and (min-width: $min-break-l) {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+
+            > li {
+                display: flex;
+                flex-direction: column;
+                padding: 10px 15px;
+                background-color: $white;
+                border: 1px $blue-grey solid;
+                border-radius: 8px;
+
+                @media screen and (min-width: $min-break-m) {
+                    padding: 20px 25px;
+                }
+
+                span {
+                    display: block;
+                    margin-bottom: 15px;
+                    flex-grow: 1;
+                }
+
+                button {
+                    display: block;
+                    padding: 6px 18px;
+                }
+            }
+        }
+    }
+    
+    .author-container {
+        display: flex;
+        flex-direction: column;
+        margin-top: 30px;
+
+        @media screen and (min-width: $min-break-s) {
+            flex-direction: row;
+        }
+
+        .author-image {
+            flex-basis: 50px;
+            padding-bottom: 20px;
+
+            @media screen and (min-width: $min-break-s) {
+                padding-right: 20px;
+                padding-bottom: 0;
+            }
+
+            img {
+                max-width: 50px;
+                border-radius: 50%;
+            }
+        }
+
+        .author-info {
+            font-size: 13px;
+            flex-basis: 320px;
+
+            .author-info-title {
+                font-weight: 700;
+                margin-bottom: 5px;
+                
+                span {
+                    color: $main-blue;
+                }
+            }
+
+            .author-info-description {
+                font-size: 11px;
+                margin: 0;
+            }
+        }
+    }
+
+    .faq-modal-container {
+        box-sizing: border-box;
+        position: fixed;
+        background-color: rgba(black, 0.5);
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        padding: 20px 10px;
+
+        @media screen and (min-width: $min-break-s) {
+            padding: 80px 30px;
+        }
+
+        @media screen and (min-width: $min-break-m) {
+            padding: 120px 50px;
+        }
+
+        @media screen and (min-width: $min-break-l) {
+            padding: 200px 50px;
+        }
+
+        .faq-modal-wrapper {
+            box-sizing: border-box;
+            position: relative;
+            max-height: 100%;
+            max-width: 600px;
+            padding: 40px 20px 30px;
+            margin: 0 auto;
+            background-color: $white;
+            border: 1px $blue-grey solid;
+            border-radius: 10px;
+
+            @media screen and (min-width: $min-break-m) {
+                padding: 50px 30px 40px;
+            }
+
+            .btn-close {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                height: 20px;
+                width: 20px;
+                background: none;
+                border: none;
+                padding: 0;
+                outline: none;
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 20px;
+                cursor: pointer;
+                transition: color .3s;
+
+                &:before {
+                    content: "\2715";
+                }
+
+                &:hover, &:focus {
+                    color: $dark-grey;
+                }
+            }
+
+            .faq-modal-title-wrapper {
+                padding-bottom: 20px;
+
+                h2 {
+                    margin: 0;
+                }
+                
+                hr {
+                    margin-top: 10px;
+                    margin-bottom: 0;
+
+                    @media screen and (min-width: $min-break-m) {
+                        margin-top: 20px;
+                    }
+                }
+            }
+
+            .faq-modal-content-wrapper {
+                box-sizing: border-box;
+                overflow-y: auto;
+                
+                &.has-scroll {
+                    padding-right: 20px;
+                }
+
+                ul {
+                    padding-left: 20px;
+                }
+            }
+        }
+
+        &.fade-enter-active, &.fade-leave-active {
+            transition: opacity .6s;
+        }
+
+        &.fade-enter, &.fade-leave-to {
+            opacity: 0;
+        }
+    }
+}
