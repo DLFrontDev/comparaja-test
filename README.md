@@ -6,10 +6,13 @@ Corrigi a fórmula de cálculo do montante mensal
 Utilizei o xhttpRequest por ser uma solução nativa para fazer requests, sendo isto um caso limitado e pequeno de um desafio não quero adicionar mais dependências que o estritamente necessário
 Tornei a renderização do form dependente do toggle, poupando tempo na renderização caso o utilizador não clique no botão
 Organizei os componentes e as views de cada página em pastas próprias, devido à natureza rudimentar do meu protótipo importo os scripts necessários para cada componente no head de cada página fazendo uso do atributo defer no carregamento dos scripts das views para garantir que são carregados após o carregamento dos scripts dos componentes
+
 Depois de criar os esqueletos de html para os dados dei início à estilização de cada um dos componentes e do look geral do site (Neste ponto ainda só criei os componentes do Minimum Value Product requeridos pelo enunciado)
+
 Corrigi os valores de hexa nas cores providenciadas
 Criei breakpoints em variáveis e também criei maps para depois poder iterar sobre eles para criar certas regras de estilo de uma maneira mais estruturada
 Categorizei cada scss para melhorar a organização dos ficheiros
+Criei o css numa óptica mobile first, de maneira a tornar o código mais mobile friendly
 Utilizei tanto quanto possível hierarquias de classes componente>container>wrapper
 Criei os tipos de botões com uma estrutura para expandir estilos para outras cores se necessário
 

@@ -4,7 +4,7 @@ Vue.component('faq-list', {
         <div class='faq-list'>
             <h2 class='faq-list-title'>{{faqs.title}}</h2>
             <div class='faq-list-container' v-for='(faq, i) in faqs.faqList'>
-                <h3 class='faq-list-subtitle' v-if='faqs.subtitle'>{{faq.subtitle}}</h3>
+                <h3 class='faq-list-subtitle' v-if='faq.subtitle'>{{faq.subtitle}}</h3>
                 <ul>
                     <li v-for='(faq, o) in faq.faqs'>
                         <span>{{faq.title}}</span>
